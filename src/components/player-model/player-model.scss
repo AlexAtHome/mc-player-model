@@ -1,0 +1,377 @@
+$steveSkin: 'data:image/png;base64,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';
+
+
+/* TODO: Outer layers for each limb */
+:host {
+	--mc-height: 320px;
+	--mc-skin: url('#{$steveSkin}');
+  display: block;
+  position: relative;
+	perspective: 1000px;
+  width: calc(var(--mc-height) / 2);
+  height: var(--mc-height);
+	margin: 0;
+  padding: 0;
+	perspective-origin: calc(var(--mc-height) / 3);
+}
+
+.cuboid {
+	width: var(--rect-width);
+	height: var(--rect-height);
+	transform-style: preserve-3d;
+	box-sizing: border-box;
+	position: relative;
+	image-rendering: pixelated;
+	transform: rotateX(var(--mc-rotate-y, 0deg)) rotateY(var(--mc-rotate-x, 0deg));
+	transform-origin: 50% 50%;
+}
+
+.cuboid .face {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	background-image: repeating-linear-gradient(0deg, rgba(70, 70, 70, 0.2) 0px, rgba(70, 70, 70, 0.2) 1px, transparent 1px, transparent 21px), repeating-linear-gradient(90deg, rgba(70, 70, 70, 0.2) 0px, rgba(70, 70, 70, 0.2) 1px, transparent 1px, transparent 21px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform-origin: 50% 50%;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+}
+
+.cuboid .front {
+	width: var(--rect-width);
+	height: var(--rect-height);
+	transform: translate(-50%, -50%) rotateY(0deg) translateZ(calc(var(--rect-depth) / 2));
+}
+
+.cuboid .rear {
+	width: var(--rect-width);
+	height: var(--rect-height);
+	transform: translate(-50%, -50%) rotateY(-180deg) translateZ(calc(var(--rect-depth) / 2));
+}
+
+.cuboid .left {
+	width: var(--rect-depth);
+	height: var(--rect-height);
+	transform: translate(-50%, -50%) rotateY(-90deg) translateZ(calc(var(--rect-width) / 2));
+}
+
+.cuboid .right {
+	width: var(--rect-depth);
+	height: var(--rect-height);
+	transform: translate(-50%, -50%) rotateY(90deg) translateZ(calc(var(--rect-width) / 2));
+}
+
+.cuboid .top {
+	width: var(--rect-width);
+	height: var(--rect-depth);
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(calc(var(--rect-height) / 2));
+}
+
+.cuboid .bottom {
+	width: var(--rect-width);
+	height: var(--rect-depth);
+	transform: translate(-50%, -50%) rotateX(-90deg) rotateZ(180deg) translateZ(calc(var(--rect-height) / 2));
+}
+
+.cube {
+	--rect-width: var(--cube-size);
+	--rect-height: var(--cube-size);
+	--rect-depth: var(--cube-size);
+}
+
+.model {
+	position: relative;
+	transform-style: preserve-3d;
+	width: var(--model-width, 300px);
+	height: var(--model-height, 300px);
+  margin: auto;
+	transform-origin: 50% 50%;
+	transform: rotateX(var(--mc-rotate-y, 0deg)) rotateY(var(--mc-rotate-x, 0deg));
+}
+
+.model .cuboid {
+	transform: none !important;
+}
+
+.row {
+	transform-style: preserve-3d;
+	transform-origin: 50% 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.steve {
+	/* input */
+
+	/* misc */
+	--width: calc(var(--mc-height) / 2);
+	--head-size: calc(var(--mc-height) / 4);
+
+	--torso-width: calc(var(--mc-height) / 4);
+	--torso-height: calc(var(--mc-height) / 2.6666);
+	--torso-depth: calc(var(--mc-height) / 8);
+
+	--leg-width: calc(var(--mc-height) / 8);
+	--leg-depth: calc(var(--mc-height) / 8);
+	--leg-height: calc(var(--mc-height) / 2.6666);
+
+	--hand-width: calc(var(--mc-height) / 8);
+	--hand-depth: calc(var(--mc-height) / 8);
+	--hand-height: calc(var(--mc-height) / 2.6666);
+
+	/*****/
+	--model-height: var(--mc-height);
+	--model-width: var(--width);
+}
+
+
+:is(.steve__head, .steve__torso, .steve__left-hand, .steve__left-leg, .steve__right-hand, .steve__right-leg) .face {
+	--cell: calc(100% / 7);
+	background-image: var(--mc-skin);
+	background-size: 800%;
+  background-color: tomato;
+	border: none;
+}
+
+.steve__head {
+	--cube-size: var(--head-size);
+}
+
+.steve__head .front {
+	background-position-x: var(--cell);
+	background-position-y: var(--cell);
+}
+
+.steve__head .rear {
+	background-position-y: calc(var(--cell) * 1);
+	background-position-x: calc(var(--cell) * 3);
+}
+
+.steve__head .left {
+	background-position-y: calc(var(--cell) * 1);
+	background-position-x: calc(var(--cell) * 0);
+}
+
+.steve__head .right {
+	background-position-y: calc(var(--cell) * 1);
+	background-position-x: calc(var(--cell) * 2);
+}
+
+.steve__head .top {
+	background-position-y: 0;
+	background-position-x: calc(var(--cell) * 1);
+}
+
+.steve__head .bottom {
+	background-position-y: 0;
+	background-position-x: calc(var(--cell) * 2);
+}
+
+.steve__torso {
+	--rect-depth: var(--torso-depth);
+	--rect-width: var(--torso-width);
+	--rect-height: var(--torso-height);
+}
+
+.steve__torso .face {
+	--cell: calc(100% / 8);
+	background-color: tomato;
+}
+
+.steve__torso .front {
+	background-position-x: calc(var(--cell) * 2.86);
+	background-position-y: calc(var(--cell) * 3.07);
+}
+
+.steve__torso .rear {
+	background-position-x: calc(var(--cell) * 4);
+	background-position-y: calc(var(--cell) * 3.08);
+}
+
+.steve__torso .left {
+	background-position-x: calc(var(--cell) * 2.13);
+	background-position-y: calc(var(--cell) * 3.08);
+	background-size: 1600%;
+}
+
+.steve__torso .right {
+	background-position-x: calc(var(--cell) * 4.8);
+	background-position-y: calc(var(--cell) * 3.08);
+	background-size: 1600%;
+}
+
+.steve__torso .top {
+	background-position-x: calc(var(--cell) * 2.86);
+	background-position-y: calc(var(--cell) * 2.13);
+}
+
+.steve__torso .bottom {
+	background-position-x: calc(var(--cell) * 4);
+	background-position-y: calc(var(--cell) * 2.13);
+}
+
+.steve__left-hand,
+.steve__right-hand {
+	--rect-depth: var(--hand-depth);
+	--rect-width: var(--hand-width);
+	--rect-height: var(--hand-height);
+}
+
+.steve__left-hand .front {
+	background-position-x: calc(var(--cell) * 5.137);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__left-hand .rear {
+	background-position-x: calc(var(--cell) * 6.067);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__left-hand .left {
+	background-position-x: calc(var(--cell) * 4.666);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__left-hand .right {
+	background-position-x: calc(var(--cell) * 5.6);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__left-hand .top {
+	background-position-x: calc(var(--cell) * 5.135);
+	background-position-y: calc(var(--cell) * 1.865);
+	background-size: 1600%;
+}
+
+.steve__left-hand .bottom {
+	background-position-x: calc(var(--cell) * 5.6);
+	background-position-y: calc(var(--cell) * 1.866);
+	background-size: 1600%;
+	transform: translate(-50%, -50%) rotateX(-90deg) translateZ(calc(var(--rect-height) / 2));
+}
+
+/* TODO: Separate textures for the right hand */
+.steve__right-hand .front {
+	background-position-x: calc(var(--cell) * 5.137);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__right-hand .rear {
+	background-position-x: calc(var(--cell) * 6.067);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__right-hand .left {
+	background-position-x: calc(var(--cell) * 4.666);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__right-hand .right {
+	background-position-x: calc(var(--cell) * 5.6);
+	background-position-y: calc(var(--cell) * 2.692);
+	background-size: 1600%;
+}
+
+.steve__right-hand .top {
+	background-position-x: calc(var(--cell) * 5.135);
+	background-position-y: calc(var(--cell) * 1.865);
+	background-size: 1600%;
+}
+
+.steve__right-hand .bottom {
+	background-position-x: calc(var(--cell) * 5.6);
+	background-position-y: calc(var(--cell) * 1.866);
+	background-size: 1600%;
+	transform: translate(-50%, -50%) rotateX(-90deg) translateZ(calc(var(--rect-height) / 2));
+}
+
+.steve__left-leg,
+.steve__right-leg {
+	--rect-depth: var(--leg-depth);
+	--rect-width: var(--leg-width);
+	--rect-height: var(--leg-height);
+}
+
+.steve__left-leg .front {
+	background-position-x: calc(var(--cell) * 0.47);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__left-leg .rear {
+	background-position-x: calc(var(--cell) * 1.4);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__left-leg .left {
+	background-position-x: calc(var(--cell) * 0);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__left-leg .right {
+	background-position-x: calc(var(--cell) * 0.936);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__left-leg .top {
+	background-position-x: calc(var(--cell) * 3.266);
+	background-position-y: calc(var(--cell) * 1.865);
+	background-size: 1600%;
+}
+
+.steve__left-leg .bottom {
+	background-position-x: calc(var(--cell) * 0.93);
+	background-position-y: calc(var(--cell) * 1.866);
+	background-size: 1600%;
+	transform: translate(-50%, -50%) rotateX(-90deg) scaleX(-1) translateZ(calc(var(--rect-height) / 2));
+}
+
+/* TODO: Separate texture for the right leg */
+.steve__right-leg .front {
+	background-position-x: calc(var(--cell) * 0.47);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__right-leg .rear {
+	background-position-x: calc(var(--cell) * 1.4);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__right-leg .left {
+	background-position-x: calc(var(--cell) * 0);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__right-leg .right {
+	background-position-x: calc(var(--cell) * 0.936);
+	background-position-y: calc(var(--cell) * 2.698);
+	background-size: 1600%;
+}
+
+.steve__right-leg .top {
+	background-position-x: calc(var(--cell) * 3.266);
+	background-position-y: calc(var(--cell) * 1.865);
+	background-size: 1600%;
+}
+
+.steve__right-leg .bottom {
+	background-position-x: calc(var(--cell) * 0.93);
+	background-position-y: calc(var(--cell) * 1.866);
+	background-size: 1600%;
+	transform: translate(-50%, -50%) rotateX(-90deg) scaleX(-1) translateZ(calc(var(--rect-height) / 2));
+}

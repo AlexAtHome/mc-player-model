@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Minecraft Player Model</title>
+
+  <script type="module" src="/build/mc-player-model.esm.js"></script>
+  <script nomodule src="/build/mc-player-model.js"></script>
+</head>
+<body>
+  <mc-player-model id="model" rotate-y="-20" rotate-x="20"></mc-player-model>
+
+  <label>
+    <div>X axis</div>
+    <input type="range" oninput="document.getElementById('model').setAttribute('rotate-x', this.value)" value="20" min="-360" max="360">
+  </label>
+
+</body>
+</html>
