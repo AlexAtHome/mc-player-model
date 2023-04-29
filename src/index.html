@@ -9,12 +9,22 @@
   <script nomodule src="/build/mc-player-model.js"></script>
 </head>
 <body>
-  <mc-player-model id="model" rotate-y="-20" rotate-x="20"></mc-player-model>
+	<section>
+		<mc-player-model id="steve" rotate-y="-20" rotate-x="20"></mc-player-model>
 
-  <label>
-    <div>X axis</div>
-    <input type="range" oninput="document.getElementById('model').setAttribute('rotate-x', this.value)" value="20" min="-360" max="360">
-  </label>
+		<label>
+			<div>X axis</div>
+			<input type="range" oninput="document.getElementById('steve').setAttribute('rotate-x', this.value)" value="20" min="-360" max="360">
+		</label>
+	</section>
 
+	<section>
+		<mc-player-model id="alex" slim skin="images/Template_slim.webp" rotate-y="-20" rotate-x="20"></mc-player-model>
+
+		<label>
+			<div>X axis</div>
+			<input type="range" oninput="document.getElementById('alex').setAttribute('rotate-x', this.value)" value="20" min="-360" max="360">
+		</label>
+	</section>
 </body>
 </html>

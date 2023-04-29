@@ -9,14 +9,15 @@ export class MinecraftPlayerModel {
 	@Prop() rotateX: number
 	@Prop() rotateY: number
 	@Prop() height: number
-	@Prop() skin: string
+	@Prop({ attribute: 'skin' }) skinUrl: string
+	@Prop({ attribute: 'slim' }) isSlim: boolean
 
 	@State() private styles: Record<string, string> = {};
 
 	@Watch('rotateX')
 	@Watch('rotateY')
 	@Watch('height')
-	@Watch('skin')
+	@Watch('skinUrl')
 	refreshStyles(): void {
 		this.styles = {}
 		if (this.rotateX) {
@@ -25,8 +26,8 @@ export class MinecraftPlayerModel {
 		if (this.rotateY) {
 			this.styles['--mc-rotate-y'] = `${this.rotateY}deg`
 		}
-		if (this.skin) {
-			this.styles['--mc-skin'] = `url('${this.skin}')`
+		if (this.skinUrl) {
+			this.styles['--mc-skin'] = `url('${this.skinUrl}')`
 		}
 		if (this.height) {
 			this.styles['--mc-height'] = `${this.height}px`
@@ -39,18 +40,20 @@ export class MinecraftPlayerModel {
 
 	render() {
 		return <Host>
-			<div class="model steve" style={this.styles}>
+			<div class={{
+				"model": true, "player": true, "player_slim": this.isSlim
+			}} style={this.styles}>
 				<div class="row">
-					<Cube className="steve__head" />
+					<Cube className="player__head" />
 				</div>
 				<div class="row">
-					<Cuboid className="steve__left-hand" />
-					<Cuboid className="steve__torso" />
-					<Cuboid className="steve__right-hand" />
+					<Cuboid className="player__left-hand" />
+					<Cuboid className="player__torso" />
+					<Cuboid className="player__right-hand" />
 				</div>
 				<div class="row">
-					<Cuboid className="steve__left-leg" />
-					<Cuboid className="steve__right-leg" />
+					<Cuboid className="player__left-leg" />
+					<Cuboid className="player__right-leg" />
 				</div>
 			</div>
 		</Host>;

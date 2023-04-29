@@ -15,6 +15,15 @@ export const config: Config = {
       type: 'dist-custom-elements',
       minify: true,
     },
+		{
+			type: 'www',
+			copy: [
+				{
+					src: './images/',
+					dest: 'images'
+				}
+			]
+		},
     {
       type: 'docs-readme',
     },

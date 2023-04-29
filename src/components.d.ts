@@ -8,9 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface McPlayerModel {
         "height": number;
+        "isSlim": boolean;
         "rotateX": number;
         "rotateY": number;
-        "skin": string;
+        "skinUrl": string;
     }
 }
 declare global {
@@ -27,9 +28,10 @@ declare global {
 declare namespace LocalJSX {
     interface McPlayerModel {
         "height"?: number;
+        "isSlim"?: boolean;
         "rotateX"?: number;
         "rotateY"?: number;
-        "skin"?: string;
+        "skinUrl"?: string;
     }
     interface IntrinsicElements {
         "mc-player-model": McPlayerModel;
