@@ -1,0 +1,13 @@
+{
+  "name": "mc-player-model",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "minecraft",
+    "player",
+    "steve",
+    "3d"
+  ],
+  "author": ""
+}

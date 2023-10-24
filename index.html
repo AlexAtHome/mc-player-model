@@ -1,0 +1,51 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Player Model</title>
+    <script type="module" src="../index.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div>
+      <mc-player-model
+        id="steve"
+        rotate-y="-20"
+        rotate-x="20"
+      ></mc-player-model>
+
+      <label>
+        <div>X axis</div>
+        <input
+          type="range"
+          oninput="document.getElementById('steve').setAttribute('rotate-x', this.value)"
+          value="20"
+          min="-360"
+          max="360"
+        />
+      </label>
+    </div>
+
+    <div>
+      <mc-player-model
+        id="alex"
+        slim
+        skin="Template_slim.webp"
+        rotate-y="-20"
+        rotate-x="20"
+      ></mc-player-model>
+
+      <label>
+        <div>X axis</div>
+        <input
+          type="range"
+          oninput="document.getElementById('alex').setAttribute('rotate-x', this.value)"
+          value="20"
+          min="-360"
+          max="360"
+        />
+      </label>
+    </div>
+  </body>
+</html>
