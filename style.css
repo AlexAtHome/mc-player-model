@@ -255,28 +255,29 @@
   --rect-depth: var(--hand-depth);
   --rect-width: var(--hand-width);
   --rect-height: var(--hand-height);
+}
 
-  .face {
-    background-position-y: calc(var(--cell) * 2.7);
-  }
+.player__left-hand .face,
+.player__right-hand .face {
+  background-position-y: calc(var(--cell) * 2.7);
 }
 
 .player__left-hand .front {
   background-position-x: calc(var(--torso-width) * -5.54);
   background-size: 1600%;
+}
 
-  .player_slim & {
-    background-size: 2150%;
-  }
+.player_slim .player__left-hand .front {
+  background-size: 2150%;
 }
 
 .player__left-hand .rear {
   background-position-x: calc(var(--cell) * 6.067);
   background-size: 1600%;
+}
 
-  .player_slim & {
-    background-size: 2150%;
-  }
+.player_slim .player__left-hand .rear {
+  background-size: 2150%;
 }
 
 .player__left-hand .left {
@@ -307,19 +308,15 @@
 .player__right-hand .front {
   background-position-x: calc(var(--cell) * 5.137);
   background-size: 1600%;
-
-  .player_slim & {
-    background-size: 2150%;
-  }
 }
 
 .player__right-hand .rear {
   background-position-x: calc(var(--cell) * 6.067);
   background-size: 1600%;
+}
 
-  .player_slim & {
-    background-size: 2150%;
-  }
+.player_slim .player__right-hand .rear {
+  background-size: 2150%;
 }
 
 .player__right-hand .left {
